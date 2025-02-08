@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task One</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .js-box {
+            color: aqua;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid aqua;
+            line-height: 25px;
+            margin: 20px 0;
+        }
+
+        strong {
+            color: rgb(255, 129, 129);
+        }
+
+        p span {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="btn" href="../index.html">Home Page</a>
+    <div class="container">
+        <h1 class="heading">TASK 01</h1>
+        <div class="js-box">
+            <script>
+                // Getting Data 
+                var studentName = prompt("Write your name?")
+                var mobileNo = prompt("Write your Mobile No?")
+                var registrationNo = prompt("Write your Registration No?")
+                var email = prompt("Write your email?")
+                // Getting 5 Subjects Marks
+                var html = +prompt('Enter your HTML marks')
+                var css = +prompt('Enter your CSS marks')
+                var javascript = +prompt('Enter your Javascript marks')
+                var react = +prompt('Enter your React.Js marks')
+                var nextjs = +prompt('Enter your Next.Js marks')
+                // Getting Obtained Marks
+                var obtained = html + css + javascript + react + nextjs;
+                // Out of
+                var total = 500;
+                // Calculating Percentage
+                var percentage = (obtained / total * 100) + "%";
+                // Printing
+                document.write('Name: ', studentName, ', Mobile No: ', mobileNo, ", Registration No: ", registrationNo, ', Email: ', email, '<br><br>')
+                document.write('HTML Marks: ', html + '/ ', '100 <br>')
+                document.write('CSS Marks: ', css + '/ ', '100 <br>')
+                document.write('Javascipt Marks: ', javascript + '/', '100 <br>')
+                document.write('React.Js Marks: ', react + '/', '100 <br>')
+                document.write('Next.Js Marks: ', nextjs + '/', '100 <br>')
+                document.write('Obtained Marks: ', obtained, '<br>')
+                document.write('Percentage: ', percentage, '<br>')
+            </script>
+        </div>
+        <br><br>
+        <p><strong>Linkedin: </strong><span>israrahmadtech</span></p>
+        <p><strong>GitHub: </strong><span>israrahmadtech</span></p>
+    </div>
+</body>
+
+</html>
