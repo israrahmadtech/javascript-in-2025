@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number <H1>Guess Game</H1>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <script>
+            // // number guess game:
+            // take a number from user
+            // store a lucky number in a variable
+            var userInput = +prompt('Guess the number')
+            var luckyNum = 23
+            if(userInput === luckyNum){
+                document.write('Congratulations! The lucky number was ' + luckyNum)
+            } else if(isNaN(userInput)){ // if the value of userInput is NaN
+                document.write("Please enter a valid number")
+            } else{
+                document.write("Sorry! The number you have entered is not the lucky one")
+            }
+        </script>
+    </h1>
+</body>
+
+</html>

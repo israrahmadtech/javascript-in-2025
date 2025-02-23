@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task One</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .js-box {
+            color: aqua;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid aqua;
+            line-height: 25px;
+            margin: 20px 0;
+        }
+
+        strong {
+            color: rgb(255, 129, 129);
+        }
+
+        p a {
+            color: orange;
+            padding: 10px;
+            border: 1px solid orange;
+        }
+        .links{
+            border: none;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="btn" href="../index.html">Home Page</a>
+    <div class="container">
+        <h1 class="heading">TASK 02</h1>
+        <div class="js-box">
+            <script>
+                var numOne = +prompt('Enter a number')
+                console.log(numOne % 2) // even if 0, odd if 1 or greater
+                if (numOne % 2 == 0) {
+                    document.write('Number is Even')
+                }
+                else {
+                    document.write('Number is Odd')
+                }
+            </script>
+        </div>
+        <br><br>
+        <p><strong>Linkedin: </strong><a  class="links" href="https://www.linkedin.com/in/israr-ahmad-tech-30953b33a/">israrahmadtech</a></p>
+        <p><strong>GitHub: </strong><a  class="links" href="https://github.com/israrahmadtech">israrahmadtech</a></p>
+    </div>
+</body>
+
+</html>
