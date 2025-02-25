@@ -39,3 +39,32 @@ a{
     flex-direction: column;
     width: 100%;
 }
+
+/* ... Acounts Links ... */
+.acountsLinks strong {
+    display: inline-block;
+    width: 100px;
+    color: rgb(255, 129, 129);
+}
+.acountsLinks a {
+    color: orange;
+    padding: 2px 5px;
+    border: 1px solid orange;
+    line-height: 30px;
+    border-radius: 4px;
+    transition: .3s;
+}
+.acountsLinks a:hover{
+    color: #212121;
+    background-color: orange;
+}
+
+/* ... Js Box  ... */
+.js-box {
+    color: aqua;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid aqua;
+    line-height: 25px;
+    margin: 20px 0;
+}

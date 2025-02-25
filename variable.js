@@ -46,7 +46,7 @@ number /= 5; //  ==== number = number / 5
 // --number; pre-decrement
 // number--; post-decrement
 
-// console.log(20 + 'A30')  // concatication occur : output = 2030
+// console.log(20 + 'A30')  // concatication occur : output = 20A30
 // console.log(typeof (20 + '30'))  // string due to type coercion
 // console.log(20 * 'A30')  // output: NaN
 // console.log(20 * '30')  // output: 600 , number

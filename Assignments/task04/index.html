@@ -4,27 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number <H1>Guess Game</H1>
-    </title>
+    <title>Task Four</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-    <h1>
-        <script>
-            // // number guess game:
-            // take a number from user
-            // store a lucky number in a variable
-            var userInput = +prompt('Guess the number')
-            var luckyNum = 23
-            if(userInput === luckyNum){
-                document.write('Congratulations! The lucky number was ' + luckyNum)
-            } else if(isNaN(userInput)){ // if the value of userInput is NaN
-                document.write("Please enter a valid number")
-            } else{
-                document.write("Sorry! The number you have entered is not the lucky one")
-            }
-        </script>
-    </h1>
+    <a class="btn" href="../index.html">Home Page</a>
+    <div class="container">
+        <h1 class="heading">Age Calculator</h1>
+        <div class="js-box">
+            <script>
+                var yearOfBirth = +prompt("Enter your year of birth")
+                var currentDate = new Date()
+                var currentYear = currentDate.getFullYear()
+                var age = currentYear - yearOfBirth
+                if(yearOfBirth > 1900 && yearOfBirth < currentYear){
+                    document.write("You are " + age + " years old")
+                } 
+                else if(yearOfBirth > currentYear){
+                    document.write("Please enter a valid age")
+                } 
+                else{
+                    document.write("You are dead I think")
+                }
+            </script>
+        </div>
+        <br><br>
+        <p class="acountsLinks"><strong>Linkedin: </strong><a  class="links" href="https://www.linkedin.com/in/israr-ahmad-tech-30953b33a/">israrahmadtech</a></p>
+        <p class="acountsLinks"><strong>GitHub: </strong><a  class="links" href="https://github.com/israrahmadtech">israrahmadtech</a></p>
+    </div>
 </body>
 
 </html>

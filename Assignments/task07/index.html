@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Seven</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <a class="btn" href="../index.html">Home Page</a>
+    <div class="container">
+        <h1 class="heading">Aviator (Left)</h1>
+        <div class="js-box">
+            <script>
+                var floors = ['1st', '2nd', '3rd', '4th', '5th', '6th']
+                var lastFloorKey = +prompt("Enter Floor Key (1 to 6)")
+                var newFloorKey = +prompt("Enter New Floor Key (1 to 6)")
+                if(lastFloorKey >= 1 && lastFloorKey <= 6 && newFloorKey >= 1 && newFloorKey <= 6){
+                    document.write(`We are going to ${floors[newFloorKey - 1]} Floor after ${floors[lastFloorKey -1]} Floor`)
+                } else{
+                    document.write("Sorry, the desired floor is not availble")
+                }
+            </script>
+        </div>
+        <br><br>
+        <p class="acountsLinks"><strong>Linkedin: </strong><a class="links"
+                href="https://www.linkedin.com/in/israr-ahmad-tech-30953b33a/">israrahmadtech</a></p>
+        <p class="acountsLinks"><strong>GitHub: </strong><a class="links"
+                href="https://github.com/israrahmadtech">israrahmadtech</a></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Three</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <a class="btn" href="../index.html">Home Page</a>
+    <div class="container">
+        <h1 class="heading">Calculator</h1>
+        <p>Addition(+) , Subtraction(-) , Multiplication(*) , Division(/) , Modulus(%)</p>
+        <div class="js-box">
+            <script>
+                var firstNum = +prompt("Enter 1st Number")
+                var secondNum = +prompt("Enter 2nd Number")
+                var operator = prompt("Enter Operator(+ , - , * , / , %)")
+                if(isNaN(firstNum) && isNaN(secondNum)){
+                    document.write("Please enter a valid number")
+                }
+                else if(operator === '+'){
+                    document.write("Addintion = ", firstNum + secondNum)
+                }
+                else if(operator === '-'){
+                    document.write("Subtraction = ", firstNum - secondNum)
+                }
+                else if(operator === '*'){
+                    document.write("Multiplication = ", firstNum * secondNum)
+                }
+                else if(operator === '/'){
+                    document.write("Division = ", firstNum / secondNum)
+                }
+                else if(operator === '%'){
+                    document.write("Modulus = ", firstNum % secondNum)
+                } else{
+                    document.write("Please enter a valid operator")
+                }
+            </script>
+        </div>
+        <br><br>
+        <p class="acountsLinks"><strong>Linkedin: </strong><a  class="links" href="https://www.linkedin.com/in/israr-ahmad-tech-30953b33a/">israrahmadtech</a></p>
+        <p class="acountsLinks"><strong>GitHub: </strong><a  class="links" href="https://github.com/israrahmadtech">israrahmadtech</a></p>
+    </div>
+</body>
+
+</html>

@@ -4,25 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Five</title>
+    <title>Task Two</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <a class="btn" href="../index.html">Home Page</a>
     <div class="container">
-        <h1 class="heading">Celcius and Fehren hiet</h1>
+        <h1 class="heading">Even Odd Detector</h1>
         <div class="js-box">
             <script>
-                var temperature = +prompt('What is the temperature')
-                var unit = prompt("Enter temperature's unit (c for Centigrade, f for Fehrenheit)")
-                var centigrade = (temperature * (9/5)) + 32
-                var fehrenheit = (temperature - 32) * (5/9)
-                if(unit === "c"){
-                    document.write(centigrade)
+                var numOne = +prompt('Enter a number')
+                console.log(numOne % 2) // even if 0, odd if 1 or greater
+                if (numOne % 2 == 0) {
+                    document.write('Number is Even')
                 }
-                else if(unit === "f"){
-                    document.write(fehrenheit)
+                else {
+                    document.write('Number is Odd')
                 }
             </script>
         </div>
