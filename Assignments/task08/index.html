@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Seven</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <a class="btn" href="../index.html">Home Page</a>
+    <div class="container">
+        <h1 class="heading">Number Guessing Game</h1>
+        <div class="js-box">
+            <script>
+                let luckyNum = Math.floor(Math.random() * 10)
+                let guess = +prompt("Guess the number (0-10)")
+                while(guess !== luckyNum){
+                    if(guess < luckyNum){
+                        console.log("The number is TOO LOW")
+                    }else if(guess > luckyNum){
+                        console.log("The number is TOO HIGH")
+                    }
+                    guess = +prompt("Incorrect! Guess the number again (0-10)")
+                }
+                if(guess === luckyNum){
+                    document.write("Congrats! The number was " + luckyNum)
+                }
+
+
+                // let luckyNum = Math.floor(Math.random() * 10)
+                // let guess = +prompt("Guess the number (0-10)")
+                // let guesses = 1
+                // while (guesses <= 5) {
+                //     if (guess === luckyNum) {
+                //         document.write("Congrats! The number was " + luckyNum)
+                //         document.write("<br/> Your find it in " + guesses + " attemptes")
+                //         break
+                //     } else {
+                //         guess = +prompt("Incorrect! Guess the number again (0-10)")
+                //     }
+                //     guesses++
+                // }
+                // if(guesses > 5){
+                //     document.write("Sorry! You are failed in finding it")
+                //     document.write("<br/>The number was " + luckyNum)
+                // }
+            </script>
+        </div>
+        <br><br>
+        <p class="acountsLinks"><strong>Linkedin: </strong><a class="links"
+                href="https://www.linkedin.com/in/israr-ahmad-tech-30953b33a/">israrahmadtech</a></p>
+        <p class="acountsLinks"><strong>GitHub: </strong><a class="links"
+                href="https://github.com/israrahmadtech">israrahmadtech</a></p>
+    </div>
+</body>
+
+</html>

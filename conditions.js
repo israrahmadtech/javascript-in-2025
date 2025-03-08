@@ -64,3 +64,10 @@ if(NaN == false){ // return false
 // if(Boolean(NaN) == false) // true
 
 console.log(NaN == 10)
+
+// ...................  Flags  ................
+// isTrue 
+// isPakistan
+// isStudent
+
+// These kind of conditions are called flags
