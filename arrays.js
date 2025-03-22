@@ -127,3 +127,6 @@ function changeCity(array){
 changeCity(cities)
 console.log(cities)
 console.log(anotherCities)
+
+
+// Deep copy of an array: This refers to creating a new array where all elements of the original array are copied, including nested arrays or objects (if they exist). This ensures that changes to the new array do not affect the original array.
