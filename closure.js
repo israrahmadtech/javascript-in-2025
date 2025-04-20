@@ -98,24 +98,88 @@ Matlab jab ek function doosre function ke andar hota hai aur andar wala function
 
 // 💡 Practical Use Cases of Closures
 // 1️⃣ Data Encapsulation (Private Variables)
-function createCounter() {
-    let count = 0;
+// function createCounter() {
+//     let count = 0;
 
-    return {
-        increment: function () {
-            count++;
-            console.log(count);
-        },
-        decrement: function () {
-            count--;
-            console.log(count);
-        }
-    };
-}
-// console.log(createCounter())
-const counter = createCounter();
-counter.increment();  // Output: 1
-counter.increment();  // Output: 2
-counter.decrement();  // Output: 2
+//     return {
+//         increment: function () {
+//             count++;
+//             console.log(count);
+//         },
+//         decrement: function () {
+//             count--;
+//             console.log(count);
+//         }
+//     };
+// }
+// // console.log(createCounter())
+// const counter = createCounter();
+// counter.increment();  // Output: 1
+// counter.increment();  // Output: 2
+// counter.decrement();  // Output: 2
 
 // ⚡ Yeh private counter bana diya, jo directly access nahi ho sakta!
+
+
+// ............................................................................................
+// Lexical Environment — Yeh kya hota hai?
+// 🔤 Definition:
+// Lexical Environment ka matlab hota hai:
+//     "Jab JavaScript engine kisi function ko run karta hai, to wo us function ke andar ke variables aur us function ke bahar ke variables jo us waqt available hain, dono ka ek environment bana leta hai."
+
+// 🤔 Iska matlab?
+// Jab bhi koi function banta hai, us waqt wo function kis jagah bana tha, us jagah ke variables uske sath chipak jate hain — isay hi lexical (jagah ke hisaab se) kehna hai.
+
+
+// function outer() {
+//     let name = "Israr";
+
+//     function inner() {
+//         console.log("Hello", name); // name is from outer()
+//     }
+
+//     inner();
+// }
+
+// outer();
+// 🧠 Explanation:
+//     inner() function outer function ke variables ko access kar raha hai.
+
+//     Kyunki inner() bana tha outer() ke andar — to name uska lexical parent hai.
+
+//     Yehi lexical environment hai!
+
+
+// Closure — Ab aata hai asli magic
+// 📌 Definition:
+//     Jab bhi koi function apne parent scope ke variables ko yaad rakhta hai, even after parent function has finished, to us function ko closure kehte hain.
+
+function outer() {
+    let counter = 0;
+
+    return function inner() {
+        counter++;
+        console.log("Counter:", counter);
+    }
+}
+
+const inc = outer(); // outer() run hua, aur inner() return ho gaya
+
+// inc(); // Counter: 1
+// inc(); // Counter: 2
+// inc(); // Counter: 3
+
+// 🤯 Kya ho raha hai yahan?
+//     outer() sirf ek dafa chala — usne counter banaya
+//     inner() return ho gaya
+//     Lekin jab outer() khatam bhi ho gaya, tab bhi counter zinda raha
+//     inner() ne us variable ko yaad rakha — this is closure!
+
+
+// outer() function khatam ho gaya tha — to counter variable ko inner() kaise access kar pa raha hai?
+// Agar hum outer() ko baar baar call karein to kya hoga?
+
+const a = outer();
+const b = outer();
+a(); b(); a();
+

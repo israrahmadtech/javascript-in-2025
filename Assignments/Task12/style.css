@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000;
+    height: 100vh;
+    letter-spacing: 1px;
+}
+body > h2{
+    color: #fff;
+    margin: 30px 0;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgb(255, 54, 121);
+    letter-spacing: 10px;
+    word-spacing: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.box{
+    width: 470px;
+    height: 400px;
+    padding: 30px 10px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px 5px rgb(255, 54, 121);
+}
+.box > h1{
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group select,
+.input-group button{
+    width: 130px;
+    padding: 10px 10px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: #212121;
+    color: #fff;
+    box-shadow: inset 0 0 10px 2px rgb(255, 54, 121);
+    transition: all .3s;
+}
+.input-group select{
+    cursor: pointer;
+}
+.input-group input{
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid rgb(255, 54, 121);
+}
+.input-group button{
+    margin-left: 10px;
+    width: 85px;
+}
+.input-group button:hover{
+    background-color: rgb(255, 54, 121);
+    cursor: pointer;
+}
+
+.box .result{
+    font-weight: 600;
+    width: 81%;
+    height: 200px;
+    padding: 20px 10px;
+    margin: 20px auto;
+    border: 1px solid rgb(255, 54, 121);
+}

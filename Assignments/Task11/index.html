@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zip to Country</title>
+</head>
+<body>
+  <h2>Get Country from Zip Code</h2>
+
+  <label for="zip">Enter ZIP Code:</label>
+  <input type="text" id="zip" placeholder="e.g. 10001" onblur="addCountry()" />
+
+  <br /><br />
+
+  <label for="country">Country:</label>
+  <input type="text" id="country" placeholder="Country will appear here" readonly />
+
+  <script>
+    const zipToCountry = {
+      "100": "United States",
+      "200": "India",
+      "300": "United Kingdom",
+      "400": "France",
+      "500": "Germany",
+    };
+
+    const zipInput = document.getElementById("zip");
+    const countryInput = document.getElementById("country");
+
+    function addCountry() {
+      const zip = zipInput.value.trim();
+      if (zipToCountry[zip]) {
+        countryInput.value = zipToCountry[zip];
+      } else {
+        countryInput.value = "Not found";
+      }
+    };
+  </script>
+</body>
+</html>

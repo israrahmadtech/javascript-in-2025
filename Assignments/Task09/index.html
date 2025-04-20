@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="handleForm(event)">
+        <label for="username">
+            Username: <input type="text" id="username" placeholder="username" />
+            <div id="usernameError" class="error"></div>
+        </label>
+        <br />
+        <label for="password">
+            Password: <input type="password" id="password" placeholder="Password" />
+            <div id="passwordError" class="error"></div>
+        </label>
+        <br />
+        <label for="email">
+            Email: <input type="text" id="email" placeholder="email" />
+            <div id="emailError" class="error"></div>
+        </label>
+        <br />
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function handleForm(event) {
+            event.preventDefault();
+
+            // Clear previous errors
+            document.getElementById('usernameError').innerText = '';
+            document.getElementById('passwordError').innerText = '';
+            document.getElementById('emailError').innerText = '';
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            let isValid = true;
+
+            // Username validation
+            if (username === "") {
+                document.getElementById('usernameError').innerText = "Username is required";
+                isValid = false;
+            }
+
+            // Password validation
+            if (password.length < 6) {
+                document.getElementById('passwordError').innerText = "Password must be at least 6 characters";
+                isValid = false;
+            }
+
+            // Email validation (simple regex)
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                document.getElementById('emailError').innerText = "Invalid email address";
+                isValid = false;
+            }
+
+            if (isValid) {
+                console.log("Form submitted:");
+                console.log("Username:", username);
+                console.log("Password:", password);
+                console.log("Email:", email);
+                alert("Form submitted successfully!");
+            }
+        }
+    </script>
+</body>
+</html>

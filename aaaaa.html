@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        zip:<br>
+        <input type="text" id="zip" onblur="filCity()"><br>
+        City:
+        <input type="text" id="city">
+    </form>
+
+
+    <p id="p1">
+        <!-- let example="this is my example"; -->
+        <a href="javascript​:void(0);" onclick​="list();">clic to list</a>
+    </p>
+    <br>
+
+
+    <p id="ex">khan afridi </p>
+    <button onclick​="toDo();">click</button>
+    <br>
+
+    <a href="string.html" id="link">click </a>
+    <br>
+    <!-- <button onclick​="showLink()">toLink</button> -->
+    <button id="showLink">showLink</button>
+
+    <p id="ex">khan afridi</p>
+    <button onclick="toDo()">Click</button>
+    <button onclick="decrease()">Click</button>
+    <p id="acceptElements">
+
+    </p>
+
+    <script>
+        function toDo() {
+            let acceptElements = document.getElementById('acceptElements')
+            acceptElements.innerHTML += '<p id="ex">Wahab afridi</p>'
+        }
+        function decrease() {
+            let acceptElements = document.getElementById('acceptElements')
+            acceptElements.innerHTML = ''
+        }
+    </script>
+</body>
+<script src="aaaaa.js"></script>
+
+</html>

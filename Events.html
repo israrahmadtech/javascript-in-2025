@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        /* .giveColor1 {
+            color: red;
+        }
+
+        .giveColor2 {
+            color: green;
+        }
+
+        .giveColor3 {
+            color: blue;
+        } */
+        .text-red {
+            color: red;
+        }
+
+        .text-green {
+            color: green;
+        }
+
+        .text-blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <a href="javascript:void(0)" onClick="alert('a is clicked')">Click Me</a> <br> <br>
+    <a href="javascript:void(0)" onmouseover="popup()">Hover Me</a>         <br> <br>
+    <a href="javascript:void(0)" onmouseover="console.log(this)">Hover Me</a> <br> <br>
+
+    
+    
+    <button class="Deccrement" onclick="this.style.color = 'red'">Change Color</button> <br> <br>
+    <button class="Deccrement" onclick="changeColor(this)">Change Color</button> <br> <br> -->
+
+    <!-- Counter -->
+    <!-- <button class="increment" onclick="increment()">Increment</button> <br> <br>
+    <button class="Deccrement" onCLICK="decrement()">Decrement</button> <br> <br>
+    <h1 class="counter">0</h1>
+
+    <p>
+        Username: <input type="text" id="username" onfocus="this.style.backgroundColor = 'yellow'" onblur="this.style.backgroundColor = 'white'">
+    </p> -->
+
+    <!-- Form Handling -->
+    <!-- <form action="" onsubmit="hanadleForm('email')" >
+        <p>
+            Email: <input type="text" id="email">
+        </p>
+     </form> -->
+
+
+    <!-- <br>
+     <br> -->
+
+    <!-- <input type="number" placeholder="Enter id" id="studentId">
+     <h1 id="studentH1">____________</h1>
+     <button onclick="addData()">Show Data</button> -->
+
+
+
+    <!-- <h3 id="myH3">We are learning JS</h3>
+    <button onclick="changeColor('Red')">Red</button>
+    <button onclick="changeColor('Green')">Green</button>
+    <button onclick="changeColor('Blue')">Blue</button>
+
+    <script>
+        const h3 = document.getElementById('myH3')
+        function changeColor(color){
+            h3.style.color = color
+        }
+    </script> -->
+
+    <!-- <h3 id="myH3">We are learning JS</h3>
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('green')">Green</button>
+    <button onclick="changeColor('blue')">Blue</button>
+
+    <script>
+        const h3 = document.getElementById('myH3')
+        function changeColor(color) {
+            if (color === 'red') {
+                h3.className = 'giveColor1'
+            }
+            else if (color === 'green') {
+                h3.className = 'giveColor2'
+            }
+            else if (color === 'blue') {
+                h3.className = 'giveColor3'
+            }
+        }
+    </script> -->
+
+    <h3 id="myH3" class="">We are learning JS</h3>
+    <button onclick="changeColor('text-red')">Red</button>
+    <button onclick="changeColor('text-green')">Green</button>
+    <button onclick="changeColor('text-blue')">Blue</button>
+
+    <script>
+        const h3 = document.getElementById('myH3')
+        function changeColor(colorClass){
+            h3.classList.toggle(colorClass)
+        }
+    </script>
+
+
+56 ---  57 page
+
+    <script src="events.js"></script>
+</body>
+
+</html>
