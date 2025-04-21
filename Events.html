@@ -106,13 +106,29 @@
 
     <script>
         const h3 = document.getElementById('myH3')
-        function changeColor(colorClass){
+        function changeColor(colorClass) {
             h3.classList.toggle(colorClass)
         }
     </script>
 
+    <form onsubmit="handleForm(event)" id="myForm">
+        <input type="text" placeholder="Name" name="name"><br>
+        <input type="email" placeholder="Email" name="email"><br>
+        <input type="password" placeholder="Password" name="password"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function handleForm(e) {
+            e.preventDefault();
+            console.log(e.target.name)
+            console.log(e.target.name.value)
+            console.log(e.target.email.value)
+            console.log(e.target.password.value)
+            e.target.reset();
+        }
+    </script>
 
-56 ---  57 page
+    56 --- 57 page
 
     <script src="events.js"></script>
 </body>

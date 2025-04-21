@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling and Database Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Israr Ahmad Tech</h1>
+    <div id="root">
+        <div class="form-container">
+            <h1 class="heading">Registration Form</h1>
+            <div class="form">
+                <form action="" method="post" id="form">
+                    <div class="input-group">
+                        <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    <p id="error"></p>
+                    <div class="input-group">
+                        <button id="formBtn" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="database">
+            <h1 class="heading">DataBase</h1>
+            <div class="table-wrapper">
+                <table class="dataTable">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                    </tr>
+                    <!-- <tr>
+                        <td><input type="text" value="First Name"></td>
+                        <td><input type="text" value="Last Name"></td>
+                        <td><input type="text" value="Full Name"></td>
+                        <td><input type="email" value="Email"></td>
+                        <td><input type="password" value="Password"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" value="First Name"></td>
+                        <td><input type="text" value="Last Name"></td>
+                        <td><input type="text" value="Full Name"></td>
+                        <td><input type="email" value="Email"></td>
+                        <td><input type="password" value="Password"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" value="First Name"></td>
+                        <td><input type="text" value="Last Name"></td>
+                        <td><input type="text" value="Full Name"></td>
+                        <td><input type="email" value="Email"></td>
+                        <td><input type="password" value="Password"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" value="First Name"></td>
+                        <td><input type="text" value="Last Name"></td>
+                        <td><input type="text" value="Full Name"></td>
+                        <td><input type="email" value="Email"></td>
+                        <td><input type="password" value="Password"></td>
+                    </tr> -->
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
