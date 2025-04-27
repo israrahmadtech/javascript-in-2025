@@ -105,7 +105,7 @@ function registerFrom(event) {
             return;
         }
 
-        const newUser = { name: name, email: email, password: password };
+        const newUser = { name, email, password };
         users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
 
@@ -144,20 +144,26 @@ function showNotification(message, type = 'success') {
     }, 3000);
 }
 
-const insertData = document.querySelector('.insertData')
-const usersInLocal = JSON.parse(localStorage.getItem('users'))
-// console.log(usersInLocal)
-usersInLocal.map((user, index) => {
-    index++;
-    insertData.innerHTML += `<tr>
-                    <th>${index}</th>
-                    <td>${user.name}</td>
-                    <td>${user.email}</td>
-                    <td>${user.password}</td>
-                </tr>`
-})
-let userName = document.querySelector('.userName')
-if(currentUser){
-    userName.innerText = currentUser.name
+// Check if insertData element exists first
+const insertData = document.querySelector('.insertData');
+const usersInLocal = JSON.parse(localStorage.getItem('users')) || [];
+
+if (insertData) {
+    usersInLocal.map((user, index) => {
+        index++;
+        insertData.innerHTML += `<tr>
+            <th>${index}</th>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.password}</td>
+        </tr>`;
+    });
 }
-console.log(currentUser.name)
+
+// Check if userName element exists first
+const userName = document.querySelector('.userName');
+
+if (currentUser && userName) {
+    userName.innerText = currentUser.name;
+    console.log(currentUser.name);
+}
