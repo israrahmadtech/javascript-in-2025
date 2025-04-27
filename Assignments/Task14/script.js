@@ -11,7 +11,7 @@ if (window.location.href.includes('login.html') || window.location.href.includes
     }
 }
 
-if (window.location.pathname === "/" || window.location.href.includes('index.html') || window.location.href.includes('database.html')) {
+if (window.location.pathname === "https://registerloginpagesisrar.vercel.app" || window.location.href.includes('index.html') || window.location.href.includes('database.html')) {
     if (!currentUser) {
         window.location.href = '/register.html';
     }
