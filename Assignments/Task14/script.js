@@ -167,3 +167,4 @@ if (currentUser && userName) {
     userName.innerText = currentUser.name;
     console.log(currentUser.name);
 }
+
