@@ -1,3 +1,4 @@
+
 const emailError = document.querySelector('.emailError')
 const passwordError = document.querySelector('.passwordError')
 const anyError = document.querySelector('.anyError')
@@ -10,7 +11,7 @@ if (window.location.href.includes('login.html') || window.location.href.includes
     }
 }
 
-if (window.location.href.includes('/') || window.location.href.includes('index.html') || window.location.href.includes('database.html')) {
+if (window.location.pathname === "/" || window.location.href.includes('index.html') || window.location.href.includes('database.html')) {
     if (!currentUser) {
         window.location.href = '/register.html';
     }
@@ -155,3 +156,8 @@ usersInLocal.map((user, index) => {
                     <td>${user.password}</td>
                 </tr>`
 })
+let userName = document.querySelector('.userName')
+if(currentUser){
+    userName.innerText = currentUser.name
+}
+console.log(currentUser.name)
