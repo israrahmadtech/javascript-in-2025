@@ -6,13 +6,13 @@ const anyError = document.querySelector('.anyError')
 const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 if (window.location.href.includes('login.html') || window.location.href.includes('register.html')) {
     if (currentUser) {
-        window.location.href = 'index.html';
+        window.location.href = '/index.html';
     }
 }
 
-if (window.location.href.includes('https://registerloginpagesisrar.vercel.app') || window.location.href.includes('index.html') || window.location.href.includes('database.html')) {
+if (window.location.href.includes('/') || window.location.href.includes('index.html') || window.location.href.includes('database.html')) {
     if (!currentUser) {
-        window.location.href = 'register.html';
+        window.location.href = '/register.html';
     }
 }
 
